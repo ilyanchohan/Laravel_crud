@@ -37,8 +37,8 @@
     </div>
 
     <div class="form-group">
-        <label for="paid_date">Paid Date (optional)</label>
-        <input id="paid_date" name="paid_date" type="date" value="{{ old('paid_date', optional($invoice->paid_date)->format('Y-m-d')) }}">
+        <label for="paid_date">Paid Date</label>
+        <input id="paid_date" name="paid_date" type="date" value="{{ old('paid_date', optional($invoice->paid_date)->format('Y-m-d')) }}" required>
         @error('paid_date')<div class="error">{{ $message }}</div>@enderror
     </div>
 </div>

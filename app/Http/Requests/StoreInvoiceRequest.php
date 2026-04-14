@@ -33,7 +33,7 @@ class StoreInvoiceRequest extends FormRequest
                 Invoice::STATUS_VOID,
             ])],
             'billed_date' => ['required', 'date'],
-            'paid_date' => ['nullable', 'date', 'after_or_equal:billed_date'],
+            'paid_date' => ['required', 'date', 'after_or_equal:billed_date'],
         ];
     }
 }
